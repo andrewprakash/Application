@@ -1,4 +1,3 @@
 yarn.lock
 package-lock.json
-dist/app.js
-dist/vender.bundle.js
+/dist/js/***

@@ -5,7 +5,7 @@ services:
       context: .
       dockerfile: Dockerfile
     image: main-app
-    command: npm install
+    command: npm run dev
     volumes:
       - .:/app
       - /app/node_modules

@@ -3,11 +3,22 @@ services:
   app:
     build:
       context: .
-      dockerfile: Dockerfile
+      dockerfile: Dockerfile.app
     image: main-app
     command: npm run dev
     volumes:
       - .:/app
       - /app/node_modules
     ports:
+      - 3000:3000
+  web-server:
+    build:
+      context: .
+      dockerfile: Dockerfile.nginx
+    image: app-web-server
+    volumes:
+      - ./dist:/usr/share/nginx/html
+    ports:
       - 80:80
+    depends_on:
+      - app

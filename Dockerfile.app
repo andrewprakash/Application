@@ -4,7 +4,7 @@ WORKDIR /app
 
 ADD package.json /app
 
-EXPOSE 80
+EXPOSE 3000
 
 RUN npm install
 

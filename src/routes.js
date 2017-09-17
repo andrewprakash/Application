@@ -4,7 +4,7 @@ import {Route, Switch} from 'react-router-dom'
 const Page = () => {
     return (
         <div>
-            This is home page
+            This is the home page
         </div>
     )
 }

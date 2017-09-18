@@ -3,11 +3,12 @@ console.log("Starting the build process")
 
 module.exports = {
     entry: {
-        app: ['babel-polyfill', __dirname + '/src/main.js']
+        "app-reports": ['babel-polyfill', __dirname + '/src/main.js']
     },
     output: {
         path: __dirname + '/dist',
-        filename: 'js/[name].js'
+        filename: 'js/[name].js',
+        libraryTarget: "umd"
     },
     devtool: 'source-map',
     module: {

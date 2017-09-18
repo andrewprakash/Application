@@ -7,10 +7,8 @@ export default function(ReportType) {
 
         }
         render () {
-            var reportTypeSelected = false;
-            console.log("the props", this.props)
-
             const inovices = ["invoices","invoicebyclient"]
+            var reportTypeSelected = false;
             var pathname = this.props.location.pathname.split("/")
 
             if(pathname.length > 2){
